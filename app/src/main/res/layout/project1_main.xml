@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ContentDescription"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!-- Setting background layer -->
+
+   <ImageView
+       android:id="@+id/photo_fog"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:src="@drawable/fog"
+       android:scaleType="centerCrop" />
+
+    <!-- Secure logo layer -->
+
+    <ImageView
+        android:id="@+id/photo_secure"
+        android:layout_width="@dimen/secure_width"
+        android:layout_height="@dimen/secure_height"
+        android:src="@drawable/secure"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Text mainfocus -->
+
+    <TextView
+        android:id="@+id/SES_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SeS"
+        android:textSize="@dimen/text_big"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:layout_alignBottom="@+id/photo_secure"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Option: Login -->
+
+    <Button
+        android:id="@+id/Login_Button"
+        android:text="@string/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_box_middle"
+        android:alpha="0.8"
+        android:layout_below="@+id/photo_secure"
+        android:layout_alignStart="@+id/photo_secure" />
+
+    <!-- Option: Exit  -->
+
+    <Button
+        android:id="@+id/Login_Exit"
+        android:text="@string/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:layout_alignBaseline="@+id/Login_Button"
+        android:layout_alignBottom="@+id/Login_Button"
+        android:layout_alignEnd="@+id/photo_secure" />
+
+    <!-- contrast -->
+
+ <View
+     android:id="@+id/view_white"
+     android:layout_width="match_parent"
+     android:layout_height="@dimen/margin_box_middle"
+     android:alpha="0.6"
+     android:background="#FFFFFF"
+     android:layout_alignParentBottom="true"
+     android:layout_alignParentStart="true" />
+
+ <!-- insert quotes -->
+
+ <TextView
+     android:id="@+id/quote_textView"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textColor="@android:color/background_dark"
+     android:textSize="@dimen/text_medium"
+     android:textStyle="italic"
+     android:text="@string/quote"
+     android:layout_alignParentBottom="true"
+     android:layout_marginStart="@dimen/margin_box_small"
+     android:layout_marginBottom="@dimen/margin_box_extrasmall"/>
+
+
+ <!-- closing tag-->
+</RelativeLayout>
+
+
